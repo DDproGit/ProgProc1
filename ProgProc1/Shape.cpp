@@ -5,9 +5,9 @@ void In(ball& b, ifstream& ist);
 void Out(ball& b, ofstream& ofst);
 void In(parallelepiped& p, ifstream& ist);
 void Out(parallelepiped& p, ofstream& ofst);
-int volume(parallelepiped& p);
-int volume(ball& b);
-int volume(shape* s)
+float volume(parallelepiped& p);
+float volume(ball& b);
+float volume(shape* s)
 {
 	switch (s->k) {
 	case shape::key::BALL:

@@ -3,7 +3,7 @@
 using namespace std;
 shape* InShape(ifstream& ifst);
 void OutShape(shape* s, ofstream& ofst);
-int volume(shape* s);
+float volume(shape* s);
 // Очистка контейнера от элементов
 // (освобождение памяти)
 // Инициализация контейнера
