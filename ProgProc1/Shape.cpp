@@ -16,6 +16,7 @@ int volume(shape* s)
 		return volume(s->p);
 	default:
 		return -1;
+	}
 }
 // ¬вод параметров обобщенной фигуры из файла
 shape* InShape(ifstream& ifst)
