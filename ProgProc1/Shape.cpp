@@ -9,6 +9,7 @@ void In(tetrahedron& b, ifstream& ifst);
 void Out(tetrahedron& b, ofstream& ofst);
 float volume(parallelepiped& p);
 float volume(ball& b);
+float volume(tetrahedron& p);
 float volume(shape* s)
 {
 	switch (s->k) {
@@ -16,6 +17,8 @@ float volume(shape* s)
 		return volume(s->b);
 	case shape::key::PARALLELEPIPED:
 		return volume(s->p);
+	case shape::key::TETRAHEDRON:
+		return volume(s->t);
 	default:
 		return -1;
 	}
