@@ -1,7 +1,16 @@
 Filled container. 
-Container contains 3 elements.
+Container contains 6 elements.
 0: It is Ball: r = 3, density = 3
 1: It is Parallelepiped: a = 1, b = 2, c = 3, density = 6.13
 2: It is Ball: r = 9, density = 5.6
+3: It is Ball: r = 3, density = 3
+4: It is Parallelepiped: a = 1, b = 2, c = 3, density = 6.13
+5: It is Parallelepiped: a = 1, b = 2, c = 3, density = 6.13
+Multimethod.
+One ball and one parallelepiped
+First is a parallelepiped, second is a ball
+Two balls
+One ball and one parallelepiped
+We have two parallelepipeds
 Empty container. 
 Container contains 0 elements.

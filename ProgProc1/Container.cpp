@@ -73,3 +73,47 @@ void Out(container& c, ofstream& ofst) {
 		pointer = pointer->next;
 	}
 }
+void MultiMethod(container& c, ofstream& ofst)
+{
+	int length = GetLength(c);
+	ofst << "Multimethod." << endl;
+	node* pointer = c.head;
+	for (int i = 0; i < length - 1; i++)
+	{
+		switch (pointer->sp->k)
+		{
+		case shape::key::BALL:
+			switch (pointer->next->sp->k)
+			{
+			case shape::key::BALL:
+				ofst << "Two balls" << endl;
+				break;
+			case shape::key::PARALLELEPIPED:
+				ofst << "One ball and one parallelepiped" << endl;
+				break;
+			default:
+				ofst << "Unknown second type" << endl;
+				break;
+			}
+			break;
+		case shape::key::PARALLELEPIPED:
+			switch (pointer->next->sp->k)
+			{
+			case shape::key::BALL:
+				ofst << "First is a parallelepiped, second is a ball" << endl;
+				break;
+			case shape::key::PARALLELEPIPED:
+				ofst << "We have two parallelepipeds" << endl;
+				break;
+			default:
+				ofst << "Unknown second type" << endl;
+				break;
+			}
+			break;
+		default:
+			ofst << "Unknown first type" << endl;
+			break;
+		}
+		pointer = pointer->next;
+	}
+}
