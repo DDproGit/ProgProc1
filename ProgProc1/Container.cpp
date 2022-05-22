@@ -145,6 +145,9 @@ void MultiMethod(container& c, ofstream& ofst)
 			case shape::key::PARALLELEPIPED:
 				ofst << "One ball and one parallelepiped" << endl;
 				break;
+			case shape::key:: TETRAHEDRON:
+				ofst << "One ball and one tetrahedron" << endl;
+				break;
 			default:
 				ofst << "Unknown second type" << endl;
 				break;
@@ -158,6 +161,26 @@ void MultiMethod(container& c, ofstream& ofst)
 				break;
 			case shape::key::PARALLELEPIPED:
 				ofst << "We have two parallelepipeds" << endl;
+				break;
+			case shape::key::TETRAHEDRON:
+				ofst << "First is a parallelepiped, second is a tetrahedron" << endl;
+				break;
+			default:
+				ofst << "Unknown second type" << endl;
+				break;
+			}
+			break;
+		case shape::key::TETRAHEDRON:
+			switch (pointer->next->sp->k)
+			{
+			case shape::key::BALL:
+				ofst << "1 tetrahedron, 2 ball" << endl;
+				break;
+			case shape::key::PARALLELEPIPED:
+				ofst << "1 tetrahedron, 2 parallelepiped" << endl;
+				break;
+			case shape::key::TETRAHEDRON:
+				ofst << "2 tetrahedrons" << endl;
 				break;
 			default:
 				ofst << "Unknown second type" << endl;
